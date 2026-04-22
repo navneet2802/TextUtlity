@@ -1,5 +1,5 @@
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React,{useState} from 'react';
@@ -29,12 +29,12 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor ='#2f3133'
       showAlert("Dark mode has been enable","success")
-      document.title = 'TextUtils - Dark Mode'
+      // document.title = 'TextUtils - Dark Mode'
     }else{
       setMode('light')
       document.body.style.backgroundColor ='white'
       showAlert("light mode has been enable","success")
-      document.title = 'TextUtils - light Mode'
+      // document.title = 'TextUtils - light Mode'
     }
   }
   return (
@@ -48,9 +48,10 @@ function App() {
   <Route exact path="/" element={ */}
     <TextForm 
       showAlert={showAlert} 
-      heading="Enter the text to analyze" 
+      heading="Try TextUtils - Word Wounter, Character Counter, Remove Extra Spaces" 
       mode={mode}
     />
+    <About mode={mode}/>
   {/* } /> */}
 {/* </Routes> */}
 </div>
